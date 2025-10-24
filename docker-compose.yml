@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  document-service:
+    build: .
+    ports:
+      - "8003:8000"
+    environment:
+      - S3_BUCKET_NAME=citizen-docs-bucket
+      - AUTH_SERVICE_URL=http://auth-service:8080
